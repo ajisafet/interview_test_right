@@ -1,4 +1,4 @@
-package com.rightmove.test;
+package com.rightmove.interview;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
