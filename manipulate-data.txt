@@ -1,0 +1,11 @@
+id, Human/Pet, First Name, Last Name, Sex, Age, D.O.B, Owner
+1, Human, Jeff, Briton, male, 29, 16/03/1977
+7, Pet, Col,  , female, 16, 16/03/1987, 3,
+2, Human, Tom, Soyer, male, 29, 15/04/1977
+3, Human, Sav, Purell, male, 27, 22/09/1978,
+4, Human, Liam, Bolt, male, 26, 22/02/1980,
+8, Pet, Scooby, Lance, male, 15, 16/03/1988, 6
+5, Human, Suzie,Long, female, 24, 17/08/1981
+6, Human, Tom,  Soyer, male, 29, 15/04/1977,
+9, Pet, Flint, Gora, male, 20, 15/04/1983, 1
+10, Pet, Trip,, female, 19, 15/04/1984, 4
