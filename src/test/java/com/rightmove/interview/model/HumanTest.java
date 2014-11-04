@@ -22,6 +22,14 @@ public class HumanTest {
 		
 	}
 	
+	public static Object[] assertIllegalIdTestValues() {
+		
+		return new Object[] {
+				0, -1, -2, -3
+		};
+		
+	}
+	
 	@Test
 	@Parameters(method = "assertIdTestValues")
 	public void assertIdTestWithValue(long i) {
@@ -29,6 +37,15 @@ public class HumanTest {
 		Animal animal = new Human();
 		animal.setId(i);
 		assertEquals(i + " expected but actual value: " + animal.getId(), i, animal.getId());
+		
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	@Parameters(method = "assertIllegalIdTestValues")
+	public void assertIdTestIfLessThanOrEqualToZero(long id) {
+	
+		Animal animal = new Human();
+		animal.setId(id);
 		
 	}
 	
