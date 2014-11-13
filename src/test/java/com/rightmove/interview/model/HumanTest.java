@@ -31,6 +31,16 @@ public class HumanTest {
 	}
 	
 	@Test
+	public void humanChildOfAnimalClassTest() {
+		
+		Object human = new Human();
+		
+		
+		assertTrue("Human is not a subclass of Animal class", human instanceof Animal);
+		
+	}
+	
+	@Test
 	@Parameters(method = "assertIdTestValues")
 	public void assertIdTestWithValue(long i) {
 		
@@ -46,6 +56,12 @@ public class HumanTest {
 	
 		Animal animal = new Human();
 		animal.setId(id);
+		
+	}
+	
+	@Test
+	public void checkFirstNameTest() {
+		
 		
 	}
 	
