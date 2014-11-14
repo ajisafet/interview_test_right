@@ -21,9 +21,13 @@ public class PetTest {
 		
 	}
 	
-	/*public Object createInstance() {
+	@Test
+	public void setLastNameTest() {
 		
-		return new Pet();
-	}*/
+		Animal animal = new Pet();
+		animal.setLastName("");
+		assertEquals("", animal.getLastName());
+		
+	}
 
 }

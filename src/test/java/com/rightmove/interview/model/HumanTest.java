@@ -30,6 +30,20 @@ public class HumanTest {
 		
 	}
 	
+	public static Object[] assertValidFirstNamesTestValues() {
+		return new Object[] {
+			"Tope", "James", "Calista"	
+		};
+	}
+	
+	public static Object[] assertInvalidFirstNamesTestValues() {
+		
+		return new Object[] {
+			""
+		};
+		
+	}
+	
 	@Test
 	public void humanChildOfAnimalClassTest() {
 		
@@ -60,9 +74,50 @@ public class HumanTest {
 	}
 	
 	@Test
-	public void checkFirstNameTest() {
+	@Parameters(method="assertValidFirstNamesTestValues")
+	public void checkFirstNameValidNameTest(String firstName) {
 		
+		Animal animal = new Human();
+		animal.setFirstName(firstName);
+		assertEquals("Error! First Name field is wrong. Expected value: " + firstName
+		+ ", Actual value: " + animal.getFirstName(), firstName, animal.getFirstName());
 		
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	@Parameters(method = "assertInvalidFirstNamesTestValues")
+	public void checkFirstNameInvalidNameTest(String firstName) {
+		
+		Animal animal = new Human();
+		animal.setFirstName(firstName);
+		/*assertEquals("Error! First Name field is wrong. Expected value: " + firstName
+		+ ", Actual value: " + animal.getFirstName(), firstName, animal.getFirstName());*/
+		
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void checkFirstNameNullNameTest(String firstName) {
+		
+		Animal animal = new Human();
+		animal.setFirstName(null);
+				
+	}
+	
+	@Test
+	public void setLastNameTest(){
+		
+		Animal animal = new Human();
+		animal.setLastName("Ajisafe");
+		assertEquals("Expected: Ajisafe, Actual: " +  animal.getLastName(), "Ajisafe", animal.getLastName());
+	
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void setLastNameWithEmptyStringValueTest(){
+		
+		Animal animal = new Human();
+		animal.setLastName("");
+			
 	}
 	
 }
