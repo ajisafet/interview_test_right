@@ -8,9 +8,6 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-import com.rightmove.inteview.model.Animal;
-import com.rightmove.inteview.model.Human;
-
 @RunWith(JUnitParamsRunner.class)
 public class HumanTest {
 	
@@ -54,24 +51,7 @@ public class HumanTest {
 		
 	}
 	
-	@Test
-	@Parameters(method = "assertIdTestValues")
-	public void assertIdTestWithValue(long i) {
-		
-		Animal animal = new Human();
-		animal.setId(i);
-		assertEquals(i + " expected but actual value: " + animal.getId(), i, animal.getId());
-		
-	}
 	
-	@Test(expected = IllegalArgumentException.class)
-	@Parameters(method = "assertIllegalIdTestValues")
-	public void assertIdTestIfLessThanOrEqualToZero(long id) {
-	
-		Animal animal = new Human();
-		animal.setId(id);
-		
-	}
 	
 	@Test
 	@Parameters(method="assertValidFirstNamesTestValues")

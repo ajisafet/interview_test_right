@@ -1,12 +1,13 @@
 package com.rightmove.interview.model;
 
-import org.junit.*;
+import junitparams.JUnitParamsRunner;
 
-import com.rightmove.inteview.model.Animal;
+import org.junit.*;
+import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-
+@RunWith(JUnitParamsRunner.class)
 public class PetTest {
 	
 	//Pet pet = new Pet();

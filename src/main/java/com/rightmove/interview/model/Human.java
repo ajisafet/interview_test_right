@@ -1,4 +1,5 @@
-package com.rightmove.inteview.model;
+package com.rightmove.interview.model;
+
 
 
 public class Human extends Animal{

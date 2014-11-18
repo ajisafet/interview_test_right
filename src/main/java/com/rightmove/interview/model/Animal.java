@@ -1,4 +1,4 @@
-package com.rightmove.inteview.model;
+package com.rightmove.interview.model;
 
 public abstract class Animal {
 	
