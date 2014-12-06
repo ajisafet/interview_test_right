@@ -100,5 +100,5 @@ public abstract class Animal {
 		return dateOfBirth;
 		
 	}
-		
+	
 }

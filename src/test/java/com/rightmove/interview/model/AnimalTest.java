@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import junitparams.JUnitParamsRunner;
@@ -197,12 +198,13 @@ public class AnimalTest {
 	public void setDateOfBirthWithStringTest() throws ParseException{
 		
 		String dateString = "16/03/1977";
-		DateFormat dateFormat = DateFormat.getDateInstance();
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = null;
 		date = dateFormat.parse(dateString);
 		Animal animal = new Human();
-		animal.setDateOfBirth(date);		
+		animal.setDateOfBirth(date);
 		assertEquals("Expected date: " + date + ", Actual date: " + animal.getDateOfBirth(), date, animal.getDateOfBirth());
 		
 	}
+	
 }
